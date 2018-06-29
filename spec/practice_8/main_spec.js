@@ -26,7 +26,6 @@ describe("Person", () => {
 
     describe("Student", () => {
         let klass;
-
         before(() => {
             klass = new Class(2);
         });
@@ -48,10 +47,8 @@ describe("Person", () => {
             it("should print Leader role, given student is leader", () => {
                 const klass = new Class(2);
                 const student = new Student(1, "Tom", 21, klass);
-
                 klass.assignLeader(student);
                 const introduce = student.introduce();
-
                 expect(introduce).to.equal("My name is Tom. I am 21 years old. I am a Student. I am Leader of Class 2.");            
             });
         });

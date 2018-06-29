@@ -28,21 +28,18 @@ describe("Person", () => {
         before(() => {
            klass = new Class(2); 
         });
-
         it("should have field name, age and class number", () => {
             const student = new Student("Tom", 21, klass);
             expect(student.name).to.equal("Tom");
             expect(student.age).to.equal(21);
             expect(student.klass).to.equal(klass);
         });
-
         it("should overwrite Person introduce, introduce with name, age and class number", () => {
             const student = new Student("Tom", 21, klass);
             const introduce = student.introduce();
             expect(introduce).to.equal("My name is Tom. I am 21 years old. I am a Student. I am at Class 2.");
         });
     });
-
     describe("Teacher", () => {
         let klass;
 
@@ -71,7 +68,7 @@ describe("Person", () => {
             });
         });
 
-        describe("#introduceWith", () => {
+        describe("#introduceWith", () => {                          
             let studentJerry;
 
             before(() => {
